@@ -13,7 +13,7 @@ jobs:
         - name: List and Read file 
           run: | 
             echo "My first github action workflow"
-            ls --ltra 
+            ls -ltra 
             cat hello-world.txt 
 
         - name: Generate ASCII artwork 
