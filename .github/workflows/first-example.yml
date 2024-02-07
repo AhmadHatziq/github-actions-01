@@ -6,14 +6,24 @@ jobs:
     first_job: 
         runs-on: ubuntu-latest 
         steps: # Steps will run in series 
-        - name: Welcome message 
-          run: echo "My First Github Action" 
 
         - name: Checkout Repo 
           uses: actions/checkout@v4 
 
-        - name: List files 
-          run: ls -lthr 
+        - name: List and Read file 
+          run: | 
+            echo "My first github action workflow"
+            ls --ltra 
+            cat hello-world.txt 
 
-        - name: Read file 
-          run: cat hello-world.txt 
+        - name: Generate ASCII artwork 
+          run: cowsay -f dragon "Run dragon run" >> dragon.txt 
+
+#        - name: Welcome message 
+#          run: echo "My First Github Action" 
+#
+#        - name: List files 
+#          run: ls -lthr 
+#
+#        - name: Read file 
+#          run: cat hello-world.txt 
