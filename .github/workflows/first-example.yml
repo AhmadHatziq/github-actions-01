@@ -17,7 +17,10 @@ jobs:
             cat hello-world.txt 
 
         - name: Generate ASCII artwork 
-          run: cowsay -f dragon "Run dragon run" >> dragon.txt 
+          run: | 
+            sudo apt-get install cowsay -y 
+            cowsay -f dragon "Run dragon run" >> dragon.txt 
+            cat dragon.txt 
 
 #        - name: Welcome message 
 #          run: echo "My First Github Action" 
