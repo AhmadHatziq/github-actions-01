@@ -10,6 +10,9 @@ jobs:
             - name: Checkout Repo 
               uses: actions/checkout@v4 
 
+            - name: Validate YAML file
+              run: yamllint generate-ascii.yml
+
             - name: Execute Shell Script 
               run: ./ascii-script.sh 
 
