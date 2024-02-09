@@ -11,5 +11,5 @@ jobs:
               uses: actions/checkout@v4 
 
             - name: Execute Shell Script 
-              runs: ./ascii-script.sh 
+              run: ./ascii-script.sh 
 
