@@ -14,7 +14,7 @@ jobs:
               run: ls -ltra
 
             - name: List workflow files 
-              run: ls .github/workflows -ltra
+              run: ls .github/workflows 
 
             #- name: Validate YAML file
             #  run: yamllint -d relaxed .github/workflows/generate-ascii.yaml
