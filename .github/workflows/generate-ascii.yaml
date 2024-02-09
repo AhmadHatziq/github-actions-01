@@ -16,8 +16,8 @@ jobs:
             - name: List workflow files 
               run: ls .github/workflows 
 
-            #- name: Validate YAML file
-            #  run: yamllint -d relaxed .github/workflows/generate-ascii.yaml
+            - name: Cat YAML file
+              run: cat .github/workflows/generate-ascii.yaml
 
             - name: Execute Shell Script 
               run: | 
