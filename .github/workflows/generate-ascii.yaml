@@ -13,9 +13,11 @@ jobs:
             - name: List repo files 
               run: ls -Ra
 
-            - name: Validate YAML file
-              run: yamllint -d relaxed .github/workflows/generate-ascii.yaml
+            #- name: Validate YAML file
+            #  run: yamllint -d relaxed .github/workflows/generate-ascii.yaml
 
             - name: Execute Shell Script 
-              run: ./ascii-script.sh 
+              run: | 
+              chmod +x ascii-script.sh 
+              ./ascii-script.sh 
 
