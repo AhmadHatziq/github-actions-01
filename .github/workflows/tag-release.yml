@@ -1,4 +1,4 @@
-name: Exploring variables & secrets 
+name: Tag release
 
 on: 
     push: 
