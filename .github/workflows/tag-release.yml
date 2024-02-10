@@ -1,7 +1,9 @@
 name: Exploring variables & secrets 
 
 on: 
-    push
+    push: 
+        tags: 
+            - ^v\d+(\.\d+){2}$
 
 env: 
     USERNAME: DOCKER_USERNAME_01
@@ -13,8 +15,8 @@ jobs:
             IMAGE_NAME: TEST_IMAGE_01
         runs-on: ubuntu-latest 
         steps: 
-        - name: Docker build 
-          run: echo docker build -t docker.io/$USERNAME/${{ env.IMAGE_NAME}}:$IMAGE_TAG --password=${{ secrets.DOCKER_PASSWORD }} --env=${{ vars.REPO_VAR_01 }}
+        - name: Starting tagged release process 
+          run: echo releasing tag 
           env: 
             IMAGE_TAG: v0.0.1
 
