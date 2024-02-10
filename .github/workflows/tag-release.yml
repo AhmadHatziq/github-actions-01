@@ -10,13 +10,10 @@ env:
 
 jobs: 
     
-    docker_job: 
-        env: 
-            IMAGE_NAME: TEST_IMAGE_01
+    tag_release_job: 
         runs-on: ubuntu-latest 
         steps: 
         - name: Starting tagged release process 
           run: echo releasing tag 
-          env: 
-            IMAGE_TAG: v0.0.1
+
 
