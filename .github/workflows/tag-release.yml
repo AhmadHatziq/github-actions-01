@@ -17,7 +17,9 @@ jobs:
         - name: Obtain tag version
           run: echo "RELEASE_VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
 
-        - name: Echo GitHub context 
+        - name: Dump GitHub context
+          env:
+            GITHUB_CONTEXT: ${{ toJson(github) }}
           run: echo "$GITHUB_CONTEXT"
         
         - name: Starting tagged release process for release version
