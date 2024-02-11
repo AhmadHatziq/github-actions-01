@@ -3,9 +3,12 @@ name: Workflow Filters & Activities
 on: 
   workflow_dispatch: 
   push: 
-    branches-ignore: 
-      - feature/* # eg feature/add-music, feature/update-timestamps 
-      - test/** # eg test/ui/index 
+    branches: 
+        - main 
+        - '!feature/*' # Ignore all branches starting with 'feature' using '!' operator
+    # branches-ignore: 
+    #   - feature/* # eg feature/add-music, feature/update-timestamps 
+    #   - test/** # eg test/ui/index 
   pull_request: 
     types: 
       - opened 
