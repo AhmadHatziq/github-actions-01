@@ -13,7 +13,7 @@ jobs:
                     # different instances
                 os: [ubuntu-latest, ubuntu-20.04]
                 images: [hello-world, alpine]
-                exckude: 
+                exclude: 
                     - images: alpine 
                       os: ubuntu-20.04
                 include: 
