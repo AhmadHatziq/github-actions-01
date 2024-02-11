@@ -8,9 +8,12 @@ jobs:
     deploy: 
         strategy: 
             matrix: # For a matrix, all possible combinations will be run. Hence, this matrix deploy job will have 6 
-                    # different instnaces
+                    # different instances
                 os: [ubuntu-latest, ubuntu-20.04]
                 images: [hello-world, alpine]
+                exckude: 
+                    - images: alpine 
+                      os: ubuntu-20.04
         runs-on: ubuntu-latest
         steps: 
         - name: Echo docker 
