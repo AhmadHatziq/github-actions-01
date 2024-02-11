@@ -12,9 +12,6 @@ jobs:
                 os: [ubuntu-latest, ubuntu-20.04]
                 images: [hello-world, alpine]
         runs-on: ubuntu-latest
-        concurrency:
-            group: deploy-group
-            cancel-in-progress: true # Will run the latest workflow & cancel previously running ones
         steps: 
         - name: Echo docker 
           run: docker info 
