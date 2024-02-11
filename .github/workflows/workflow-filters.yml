@@ -1,0 +1,13 @@
+name: Workflow Filters & Activities 
+
+on: 
+  workflow_dispatch: 
+  push: 
+    branches-ignore: 
+      - feature/* # eg feature/add-music, feature/update-timestamps 
+      - test/** # eg test/ui/index 
+jobs: 
+  hello_job: 
+    runs-on: ubuntu-latest 
+    steps: 
+      - run: echo executing for event type - ${{ github.event_name }}
