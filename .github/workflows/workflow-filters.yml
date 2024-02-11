@@ -6,6 +6,15 @@ on:
     branches-ignore: 
       - feature/* # eg feature/add-music, feature/update-timestamps 
       - test/** # eg test/ui/index 
+  pull_request: 
+    types: 
+      - opened 
+      - closed 
+    paths-ignore: # Workflow will trigger when a PR includes a change on any file other than README.md  
+      - README.md
+    branches: 
+      - main      # Workflow will only trigger on PR that targets the main branch 
+
 jobs: 
   hello_job: 
     runs-on: ubuntu-latest 
