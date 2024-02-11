@@ -18,8 +18,8 @@ jobs:
         steps: 
         - name: Echo docker 
           run: docker info 
-        - name: Run image on $ {{ matrix.os }}
-          run: echo docker run $ {{ matrix.images }}
+        - name: Run image on ${{ matrix.os }}
+          run: echo docker run ${{ matrix.images }}
 
     deploy-on-ubuntu: 
         runs-on: ubuntu-latest 
