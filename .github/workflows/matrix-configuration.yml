@@ -9,7 +9,7 @@ jobs:
         strategy: 
             matrix: # For a matrix, all possible combinations will be run. Hence, this matrix deploy job will have 6 
                     # different instnaces
-                os: [ubuntu-latest, windows-latest]
+                os: [ubuntu-latest, ubuntu-20.04]
                 images: [hello-world, alpine]
         runs-on: $ {{ matrix.os }}
         concurrency:
