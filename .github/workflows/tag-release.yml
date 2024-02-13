@@ -25,4 +25,7 @@ jobs:
         - name: Starting tagged release process for release version
           run: echo "Release version is $RELEASE_VERSION"
 
+        - name: Echo hello world 
+          run: echo Hello World
+
 
